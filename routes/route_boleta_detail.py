@@ -32,6 +32,7 @@ def get_boleta(presupuesto='', cerrada = False):
       for row in boletas:
          id                = row['id']
          fecha_inicio      = row['fecha_inicio']
+         hora_inicio       = row['hora_inicio']
          codigo_manobra    = row['codigo_manobra']
          comentarios       = row['comentarios']
          cantidad_asignada = row['cantidad_asignada']
@@ -57,6 +58,7 @@ def get_boleta(presupuesto='', cerrada = False):
             boleta_detail.append({
                'id'                :id,
                'fecha_inicio'      :fecha_inicio,
+               'hora_inicio'       :hora_inicio,
                'codigo_manobra'    :codigo_manobra,
                'comentarios'       :comentarios,
                'cantidad_asignada' :cantidad_asignada,
