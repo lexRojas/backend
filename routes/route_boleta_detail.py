@@ -13,6 +13,7 @@ def get_boleta(presupuesto='', cerrada = False):
 
    with conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as dict_cur:
       dict_cur.execute("select b.id, " +
+                        "   b.proyecto, " + 
                         "   b.fecha_inicio, " +
                         "   b.hora_inicio, " +
                         "   b.codigo_manobra ," +
@@ -31,6 +32,7 @@ def get_boleta(presupuesto='', cerrada = False):
 
       for row in boletas:
          id                = row['id']
+         proyecto          = row['proyecto']
          fecha_inicio      = row['fecha_inicio']
          hora_inicio       = row['hora_inicio']
          codigo_manobra    = row['codigo_manobra']
@@ -57,6 +59,7 @@ def get_boleta(presupuesto='', cerrada = False):
 
             boleta_detail.append({
                'id'                :id,
+               'proyecto'          :proyecto,
                'fecha_inicio'      :fecha_inicio,
                'hora_inicio'       :hora_inicio,
                'codigo_manobra'    :codigo_manobra,
