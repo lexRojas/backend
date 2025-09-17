@@ -15,10 +15,10 @@ from psycopg2.pool import ThreadedConnectionPool
 
     #---HEROKU DATABASE ----
 
-_hostname = 'caij57unh724n3.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com'
-_username = 'u9ml07d3orsguo'
-_password = 'p5f389676cec422b52dd30b5fe38ad36f8ae86bfe6b4cc72cfde48bcdc42e2865'
-_database = 'deh7qudban17rr' 
+_hostname = 'cfls9h51f4i86c.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com'
+_username = 'u1smtv9h92is8u'
+_password = 'pdc051a3c3e1f80c716c40ea53e3ea3f2ef624249439a97deb2b3ed231711ac56'
+_database = 'd1ptcm37j0hmpk' 
 
 DATABASE_URL = "postgresql://"+_username + ":"+ _password +"@"+ _hostname +":5432/" + _database
 
